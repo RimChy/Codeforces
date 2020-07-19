@@ -2,15 +2,16 @@
 using namespace std;
 int main()
 {
-    int n,m,ans,r,l,cnt;
-    string s,s1;
-    cin>>s>>s1;
+    long long i,j,n,m,ans,spl,sl,step,r,l,cnt;
+    string s,sp;
+    while(cin>>s>>sp)
+    {
          cnt=0;
-         n=s.size();
-         m=s1.size();
-         l=m;
-         for(int i=0;i<n;i++){
-            if(s.substr(i,l)==sp.substr(0,m))  
+         sl=s.size();
+         spl=sp.size();
+         l=spl;
+         for(i=0;i<sl;i++){
+            if(s.substr(i,l)==sp.substr(0,spl)) //eitar mane hoilo prottek tar jnno check korbe substring ta ase naki
                {
                    cnt++;
                    i=i+l-1;

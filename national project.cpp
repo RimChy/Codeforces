@@ -5,15 +5,12 @@ int main()
     int t;
     cin>>t;
     while(t--){
-        double n;
-        long long int x,y,m,p;
+
+        long long int n,x,y,m,p;
         cin>>n>>x>>y;
-        m=ceil(n/2);
-        if(x>=m){
-            cout<<n<<endl;
-        }
-        else
-        { long long sum=0;
+        if(n%2==0) m=n/2;
+        else m=(n/2)+1;
+         long long sum=0;
             if(m%x!=0){
                 p=(m/x)+1;
                 //sum=p*x+y*(p-1);
@@ -23,9 +20,9 @@ int main()
                 //cout<<p*x+y*(p-1)<<endl;
             }
            // cout<<p<<endl;
-            sum=x*p+y*(p-1);
-            cout<<sum<<endl;
-        }
+            sum=m+(p-1)*y;
+            cout<<max(sum,n)<<endl;
+
 
     }
 }
